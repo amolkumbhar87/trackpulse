@@ -1,0 +1,124 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-container{
+
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background: linear-gradient(135deg,#667eea,#764ba2);
+
+  padding:20px;
+}
+
+/* Card */
+
+.login-card{
+
+  background:white;
+
+  padding:40px;
+  border-radius:12px;
+
+  width:100%;
+  max-width:400px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Title */
+
+.login-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+/* Input */
+
+.input-group{
+  margin-bottom:20px;
+  display:flex;
+  flex-direction:column;
+}
+
+.input-group label{
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+.input-group input{
+
+  padding:12px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:14px;
+
+  outline:none;
+}
+
+.input-group input:focus{
+  border-color:#667eea;
+}
+
+/* Button */
+
+.login-btn{
+
+  width:100%;
+  padding:12px;
+
+  background:#667eea;
+  color:white;
+
+  border:none;
+  border-radius:6px;
+
+  font-size:16px;
+  cursor:pointer;
+}
+
+.login-btn:hover{
+  background:#5a67d8;
+}
+
+/* Footer */
+
+.login-footer{
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+}
+
+/* -------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------- */
+
+@media (max-width:768px){
+
+  .login-card{
+    padding:30px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .login-card{
+    padding:25px;
+  }
+
+  .login-title{
+    font-size:22px;
+  }
+
+  .input-group input{
+    padding:10px;
+  }
+
+}
