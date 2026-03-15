@@ -8,6 +8,7 @@ import OddsManager from './components/admin/OddsManager.tsx';
 import FileUploader from './components/admin/FileUploader.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import DepositApprove from './components/admin/DepositApprove.tsx';
 
 
 createRoot(document.getElementById('root')!).render(
@@ -26,6 +27,10 @@ createRoot(document.getElementById('root')!).render(
   <FileUploader />
 </AppLayout>} />
         
+        
+        <Route path="/depositApprove" element={<AppLayout title="Deposit Approvals">
+          <DepositApprove />
+        </AppLayout>} />
       </Routes>
      
     </BrowserRouter>

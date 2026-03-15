@@ -10,7 +10,7 @@ function App() {
   const connection = async () => {
     await hubconnection.invoke("JoinRace", "1");
   }
- connection();
+//  connection();
   return (
     <>
       <div>

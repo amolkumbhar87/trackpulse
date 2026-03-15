@@ -1,0 +1,24 @@
+.app-footer {
+  background: #fff;
+  border-top: 1px solid #f1f1f4;
+  padding: 14px 0;
+}
+.app-footer a {
+  color: #4b5675;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.app-footer a:hover {
+  color: #1b84ff;
+}
+.footer-copyright {
+  font-size: 13px;
+  color: #99a1b7;
+  font-weight: 500;
+}
+.footer-copyright a {
+  color: #4b5675;
+  font-weight: 700;
+}

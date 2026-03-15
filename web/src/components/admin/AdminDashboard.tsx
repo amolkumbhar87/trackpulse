@@ -21,7 +21,7 @@ const layoutStyles = `
     min-height: 100vh;
   }
   .app-body {
-    display: flex;
+    
     flex: 1;
   }
   .app-main {

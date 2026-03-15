@@ -1,116 +1,8 @@
 // components/layout/AppHeader.jsx
 import { useState } from "react";
 import { Container, Nav, Dropdown, Form, InputGroup, Button } from "react-bootstrap";
+import '../../styles/Header.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const headerStyles = `
-  .app-header {
-    height: 65px;
-    background: #fff;
-    border-bottom: 1px solid #f1f1f4;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .app-header .nav-link {
-    color: #4b5675;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background 0.15s, color 0.15s;
-  }
-  .app-header .nav-link:hover {
-    background: #f9f9f9;
-    color: #1b84ff;
-  }
-  .header-icon-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    border: none;
-    background: #f9f9f9;
-    color: #78829d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.15s, color 0.15s;
-    position: relative;
-  }
-  .header-icon-btn:hover {
-    background: #f1f1f4;
-    color: #1b84ff;
-  }
-  .notif-badge {
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    width: 16px;
-    height: 16px;
-    background: #f8285a;
-    border-radius: 50%;
-    font-size: 9px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    border: 2px solid #fff;
-  }
-  .user-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: #1b84ff;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-  }
-  .app-header .dropdown-menu {
-    border: 1px solid #f1f1f4;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 8px;
-  }
-  .app-header .dropdown-item {
-    border-radius: 6px;
-    font-size: 13px;
-    color: #4b5675;
-    padding: 8px 12px;
-  }
-  .app-header .dropdown-item:hover {
-    background: #f9f9f9;
-    color: #1b84ff;
-  }
-  .notif-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .notif-item:hover { background: #f9f9f9; }
-  .notif-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 16px;
-  }
-`;
 
 const notifications = [
   { title: "New user registered", desc: "2 min ago", icon: "bi-person-plus-fill", bg: "#e9f3ff", color: "#1b84ff" },
@@ -119,14 +11,14 @@ const notifications = [
   { title: "New order received", desc: "Yesterday", icon: "bi-bag-fill", bg: "#ffe9ef", color: "#f8285a" },
 ];
 
-const navItems = ["Pages", "Apps", "Help"];
+// const navItems = ["Pages", "Apps", "Help"];
 
 export default function Header({ onSidebarToggle }) {
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <>
-      <style>{headerStyles}</style>
+      
       <div className="app-header">
         <Container fluid className="h-100 d-flex align-items-center justify-content-between px-4">
 
@@ -141,11 +33,16 @@ export default function Header({ onSidebarToggle }) {
           </div>
 
           {/* Center: Nav links (desktop) */}
-          <Nav className="d-none d-lg-flex align-items-center gap-1">
+          {
+            <div className="d-none d-lg-flex align-items-center gap-1">
+ Track Pulse Admin
+            </div>
+          }
+          {/* <Nav className="d-none d-lg-flex align-items-center gap-1">
             {navItems.map((item) => (
               <Nav.Link key={item} href={`/${item.toLowerCase()}`}>{item}</Nav.Link>
             ))}
-          </Nav>
+          </Nav> */}
 
           {/* Right: search + icons */}
           <div className="d-flex align-items-center gap-2">
